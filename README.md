@@ -61,6 +61,6 @@ the chmod -R o-wrx / command tells the computer "hey I want to remove these perm
 
 The final step to secure the account is to change the password of the root user. This can be anything and the command to so is `passwd root` this will allow you to change the root password for the system.
 
-[PoC](https://github.com/GuiltedRose/GreyHackTutorials/blob/main/image.png?raw=true)
+![PoC](https://github.com/GuiltedRose/GreyHackTutorials/blob/main/image.png?raw=true)
 
 This is proof that it will secure the system if they gain access to your standard user account. For your servers, you only need to do the removal, and none of the fancy termanial access stuff.
