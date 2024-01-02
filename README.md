@@ -38,3 +38,26 @@ You also want to create an email & bank account at this point. This will trigger
 ```
 If you can do this, you can do most of the puzzles in the game. The rest of the things I will teach after this are scripts, and how the NPC missions work.
 
+## Op-Sec:
+
+This is a short form for Operational Security, and I touched on it a tad before. Now, I am going a bit in depth and it will help prevent some hackers from gaining access (it just makes it harder).
+
+My first tip is the same as before; have multiple internet access points to change your IP. I even change to a new one that I don't use for anything just to log out; I also turn off wifi before logging out.
+
+The second tip is realitively easy, we want to hide the Config folder in our user's home directory. You can do this by typing `sh mv Config .config` this will turn it into a hidden file. This is still easy to open, so we go onto step 3.
+
+The third tip I have involves the use of the chmod command. You can read up on it in the manual if you want to really learn why we type the commands the way we are. (I highly recommend reading them). 
+```sh
+sudo -s
+chmod -R o-wrx /
+chmod -R g-wrx /
+chmod -R u-wrx /
+chmod g+wrx /usr/bin/Terminal.exe
+chmod g+wrx /bin/sudo
+```
+I will now explain what we just did, and why we did it. The first command lets us have root access, if you don't know your password, by default it's the same as your normal user. You can crack this password in the event you forgot it by this command `decipher /usr/passwd` if this is your first time and you didn't change either password then it won't matter which user password you crack.
+
+the chmod -R o-wrx / command tells the computer "hey I want to remove these permissions from anyone that accesses the system as a guest." The second and third do the same for both users and groups. The next 2 lock down the computer so you can't use any external applications without the use of the root user. The only accessable application by default is the sudo command.
+
+The final step to secure the account is to change the password of the root user. This can be anything and the command to so is `passwd root` this will allow you to change the root password for the system.
+
