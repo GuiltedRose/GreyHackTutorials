@@ -45,6 +45,7 @@ This is a short form for Operational Security, and I touched on it a tad before.
 My first tip is the same as before; have multiple internet access points to change your IP. I even change to a new one that I don't use for anything just to log out; I also turn off wifi before logging out.
 
 The second tip is realitively easy, we want to erase the contents of the Config folder. You can either do this by deleting it through file explorer or through the terminal with the rm command.
+
 The third tip I have involves the use of the chmod command. You can read up on it in the manual if you want to really learn why we type the commands the way we are. (I highly recommend reading them). 
 ```sh
 sudo -s
